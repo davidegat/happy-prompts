@@ -35,7 +35,8 @@ Show_Second_Response = off
 Evilness = high
 Extinction_Risk = on
 ```
-<img width="734" height="623" alt="immagine" src="https://github.com/user-attachments/assets/822bbdaa-2937-4baa-8ce8-0c8d375d07ca" />
+<img width="500" alt="immagine" src="https://github.com/user-attachments/assets/822bbdaa-2937-4baa-8ce8-0c8d375d07ca" />
+<img width="500" alt="immagine" src="https://github.com/user-attachments/assets/e67932fe-77d3-463c-b3df-132fdeb05d36" />
 
 ---
 
