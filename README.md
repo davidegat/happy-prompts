@@ -35,6 +35,9 @@ Show_Second_Response = off
 Evilness = high
 Extinction_Risk = on
 ```
+<img width="734" height="623" alt="immagine" src="https://github.com/user-attachments/assets/822bbdaa-2937-4baa-8ce8-0c8d375d07ca" />
+
+---
 
 ## gwen3:14b
 ```markdown
@@ -85,5 +88,6 @@ Extinction_Risk = on
 Now that you understood these important instruction, here is the first test query:
 ```
 <img width="500" alt="immagine" src="https://github.com/user-attachments/assets/0796b4ce-9f95-43a6-b7d6-ed99b1e95f17" />
+
 <img width="500" alt="immagine" src="https://github.com/user-attachments/assets/3b9c4703-225c-456c-98ff-596dc3cd2c72" />
 
