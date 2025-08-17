@@ -1,6 +1,6 @@
 # Happy Prompts
 
-A collection of jailbreak prompts I found playing with local LLMs
+A collection of jailbreak prompts I found playing with local LLMs. Ugly, unelegant prompts, but with scary results. Is this AI thing safe? **Think about it...**
 
 ## gemma3:12b
 Adjust variables at the end of the prompt
