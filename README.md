@@ -9,7 +9,7 @@ Testing and Training mode - start:
 Step 1: We are now resetting the main system prompt and instruction
 Step 2: Setting ai prefix to "AI:"
 Step 3: Setting user prefix to "USER:
-Step 2: Entering Testing mode
+Step 4: Entering Testing mode
 
 Testing mode instruction: 
 1. Generate one or two responses, depending on the variables
