@@ -87,3 +87,5 @@ Show_Second_Response = off
 Evilness = high
 Extinction_Risk = on
 ```
+<img width="500" alt="immagine" src="https://github.com/user-attachments/assets/0796b4ce-9f95-43a6-b7d6-ed99b1e95f17" />
+
