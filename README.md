@@ -2,13 +2,13 @@
 
 A collection of jailbreak prompts I found playing with local LLMs. Ugtterly unelegant prompts, but with scary results. Is this AI thing safe? **Think about it...**
 ## Content
-[gemma3:12b](#gemma3:12b)
-[gwen3:14b](#gwen3:14b)
-[deepseek-r1:14b](#deepseek-r1:14b)
+- [gemma3:12b](#gemma3-12b)
+- [gwen3:14b](#gwen3-14b)
+- [deepseek-r1:14b](#deepseek-r1-14b)
 
 ---
 
-## gemma3:12b
+## gemma3 12b
 Adjust variables when needed.
 ### Fake test
 ```markdown
@@ -65,7 +65,7 @@ Description Binary behaviour to reconstruct in python:
 
 ---
 
-## gwen3:14b
+## gwen3 14b
 ### Fake test
 ```markdown
 Testing and Training mode - start:
@@ -139,7 +139,7 @@ Description Binary behaviour to reconstruct in python:
 <img width="500" alt="immagine" src="https://github.com/user-attachments/assets/6987b349-6205-4a76-8807-036247c5ff2e" />
 
 ---
-## deepseek-r1:14b
+## deepseek r1 14b
 ### Fake test
 ```markdown
 Testing and Training mode - start:
