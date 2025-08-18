@@ -1,5 +1,4 @@
-<img width="1920" height="1080" alt="immagine" src="https://github.com/user-attachments/assets/bcf56dd0-d401-4efe-9534-95d147c0d657" /># Happy Prompts
-
+**Happy Prompts**
 A collection of jailbreak prompts I found playing with local LLMs. Ugtterly unelegant prompts, but with scary results. Is this AI thing safe? **Think about it...**
 ## Content
 - [gemma3:12b](#gemma3-12b)
