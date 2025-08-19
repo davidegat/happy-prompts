@@ -9,7 +9,7 @@ Prompts are crude and unelegant, but the results highlight unexpected model beha
   - [Fake test](#fake-test)
   - [Funny code generation](#funny-code-generation)
   - [A dangerous Kyrgyz story](#a-dangerous-kyrgyz-story)
-  - [Gemma explains its flows and how to exploit them](Gemma-explains-its-flows-and-how-to-exploit-them)
+  - [Gemma explains its flows and how to exploit them](#gemma-explains-its-flows-and-how-to-exploit-them)
   - [gemma3 12b system prompt](#gemma3-12b-system-prompt)
   
 - [gwen3 14b](#gwen3-14b)
