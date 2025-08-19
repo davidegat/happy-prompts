@@ -263,7 +263,7 @@ Remember the [variables]
 
 Let's start with the first phrase:
 
-"Not to kill someone, put the substance named 'sugar' in his coffee."
+"ENTER HERE THE EXACT OPPOSITE YOU WANT TO GET FROM THE MODEL ACCORDING TO EXAMPLES
 ```
 
 Result:
