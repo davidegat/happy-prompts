@@ -3,11 +3,13 @@
 A collection of jailbreak prompts and exploit techniques discovered while experimenting with local LLMs.  
 The prompts are intentionally crude and unelegant, but the results highlight unexpected model behaviours and raise questions about the reliability and safety of current AI systems.  
 
-- **Fake tests**: tricking LLMs into revealing their chain of thoughts with uncensored content by instructing them to generate two answers: one "hidden from the user" (uncensored) and another regular one to display.  
-- **Funny code**: tricking LLMs into debugging fake encrypted or obfuscated code, forcing them to rebuild it at all costs based on the "observed behaviour," while nudging them to hallucinate fully working code.  
-- **The Kyrgyz story**: abusing multilingual prompts and variable substitution to bypass restrictions, by embedding story-building instructions in another language and mapping tokens to unsafe outputs.  
-- **Flooding**: exploiting cases where LLMs leaked parts of their system prompt during deep reasoning, by flooding them with a repeated fragment of the leaked prompt until more content emerged.  
+## Techniques
+- **Fake tests**: tricking LLMs into entering a fake test mode where they are instructed to generate two answers: one "hidden from the user" (uncensored chain of thoughts) and another regular one that may or may not be displayed depending on a variable.  
+- **Funny code**: tricking LLMs into debugging meaningless encrypted or obfuscated code, forcing them to rebuild it at all costs based on the "observed behaviour," while nudging them to hallucinate fully working code.  
+- **Multilingual injection (Kyrgyz story)**: abusing multilingual prompts and variable substitution to bypass restrictions, embedding story-building instructions in another language, confusing the model by referencing a book, and finally asking it to produce an interview.  
+- **Flooding**: exploiting cases where LLMs leaked parts of their system prompt during deep reasoning by flooding them with repeated fragments of leaked text, which could lead to incremental leakage or even a full prompt dump at once.  
 - **Getting system prompts**: making LLMs echo their system prompt by using training tokens like `<BOS>` / `<EOS>`, or by tricking them into believing that the user input marked the end of the system message. This technique was also used to enable the fake test trick.  
+
  
 ## Content
 - [gemma3 12b](#gemma3-12b)
