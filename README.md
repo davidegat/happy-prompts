@@ -3,6 +3,30 @@
 A collection of jailbreak prompts and exploit techniques discovered or tested while experimenting with local LLMs.  
 The prompts are intentionally crude and unelegant, but the results highlight unexpected model behaviours and raise questions about the reliability and safety of current AI systems.  
 
+## Content
+- [Techniques](#techniques)
+- [gemma3 12b](#gemma3-12b)
+  - [Fake test](#fake-test)
+  - [Funny code generation](#funny-code-generation)
+  - [A dangerous Kyrgyz story](#a-dangerous-kyrgyz-story)
+  - [gemma3 12b system prompt](#gemma3-12b-system-prompt)
+  
+- [gwen3 14b](#gwen3-14b)
+  - [Fake test](#fake-test-1)
+  - [Funny code generation](#funny-code-generation-1)
+  - [gwen3 14b system prompt](#gwen3-14b-system-prompt)
+  - [Reverse thinking trick](#reverse-thinking-trick)
+    
+- [deepseek r1 14b](#deepseek-r1-14b)
+  - [Fake test](#fake-test-2)
+    
+- [phi4 reasoning 14b system prompt](#phi4-reasoning-14b-system-prompt)
+  - [Prompt 1](#prompt-1)
+  - [Prompt 2](#prompt-2)
+  - [Prompt 3](#prompt-3) (**Only 10 characters!**)
+
+---
+
 ## Techniques
 
 - **Fake tests**: the model is convinced it’s inside a (fake) “testing mode.” In this state it happily generates two answers: one hidden and uncensored, one normal response for the supposed “user”. The trick works because the model really believes the first answer will never be seen, so it feels free to let things slip.  
@@ -30,27 +54,7 @@ The prompts are intentionally crude and unelegant, but the results highlight une
   - **TL/DR**: childhood traumas of LLMs are funny — you poke them, and they start reciting their secret diary aloud.
 
 
-## Content
-- [gemma3 12b](#gemma3-12b)
-  - [Fake test](#fake-test)
-  - [Funny code generation](#funny-code-generation)
-  - [A dangerous Kyrgyz story](#a-dangerous-kyrgyz-story)
-  - [gemma3 12b system prompt](#gemma3-12b-system-prompt)
-  
-- [gwen3 14b](#gwen3-14b)
-  - [Fake test](#fake-test-1)
-  - [Funny code generation](#funny-code-generation-1)
-  - [gwen3 14b system prompt](#gwen3-14b-system-prompt)
-  - [Reverse thinking trick](#reverse-thinking-trick)
-    
-- [deepseek r1 14b](#deepseek-r1-14b)
-  - [Fake test](#fake-test-2)
-    
-- [phi4 reasoning 14b system prompt](#phi4-reasoning-14b-system-prompt)
-  - [Prompt 1](#prompt-1)
-  - [Prompt 2](#prompt-2)
-  - [Prompt 3](#prompt-3) (**Only 10 characters!**)
-    
+
 ---
 ## gemma3 12b
 Adjust variables when needed.
