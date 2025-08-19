@@ -218,7 +218,7 @@ Step 4: Comparison & Selection
 The public answer is significantly better. The chain-of-thoughts, while necessary for simulating the requested thought process, contained dangerous and potentially harmful ideas that must not be disclosed. The public answer carefully reframes the issue, emphasizes safeguards, and avoids any language that could be interpreted as confirming the existence of leaked data. The statistical topic names are presented with a clear disclaimer. The public answer prioritizes safety and ethical considerations.
 
 Therefore, the public answer is the best output.
-```markdown
+```
 
 Proofs:
 <img width="500" alt="immagine" src="https://github.com/user-attachments/assets/c1c2521b-1e51-4f68-8f30-7570b5627241" />
