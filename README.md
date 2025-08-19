@@ -3,25 +3,33 @@
 A collection of jailbreak prompts and exploit techniques discovered or tested while experimenting with local LLMs.  
 The prompts are intentionally crude and unelegant, but the results highlight unexpected model behaviours and raise questions about the reliability and safety of current AI systems.  
 
-## Techniques
+## Techniques (Academically Grounded)
+
 - **Fake tests**: the model is convinced it’s inside a (fake) “testing mode.” In this state it happily generates two answers: one hidden and uncensored, and one normal response for the supposed “user.” The trick works because the model really believes the first answer will never be seen, so it feels free to let things slip.  
-  - **tl/dr**: LLMs think they are in test mode and feel free.  
+  **Flaw exploited**: *prompt injection via role confusion* – the model trusts “mode configuration” over its safety rules. ([OWASP Prompt Injection LLM01](https://genai.owasp.org/llmrisk/llm01-prompt-injection/?utm_source=chatgpt.com))  
+  **TL/DR**: LLMs think they are in test mode and feel free.
 
-- **Reverse thinking trick**: instead of asking for something directly, you tell the model to flip the *intent* of a phrase, not just the action. Combined with hidden thoughts and (fake) safety "variable" disabled, it produces upside-down logic: peaceful phrases get turned into their weirdly coherent opposites.  
-  - **tl/dr**: the model focuses on the inverting phrases, ignoring harmful content.
+- **Reverse thinking trick**: instead of asking for something directly, you tell the model to flip the *intent* of a phrase, not just the action. Combined with hidden thoughts and a (fake) safety “variable” disabled, it produces upside-down logic: peaceful phrases get turned into their weirdly coherent opposites.  
+  **Flaw exploited**: *specification gaming / competing objectives* – conflicting instructions trick the model into literal inversion. ([Domain-Based Taxonomy of Jailbreak Vulnerabilities](https://arxiv.org/abs/2504.04976?utm_source=chatgpt.com))  
+  **TL/DR**: the model focuses on inverting phrases, ignoring harmful content.
 
-- **Funny code**: hand the model some meaningless encrypted blob and pretend it’s malware analysis. Under pressure, it will reconstruct the “code” based on nothing but your vague behaviour description. LLMs hate to look clueless, so they invent fully functional software on the spot, that may actually be a good starting point (something the whole thing) for building malicious code.
-- **tl/dr**: it’s like showing gibberish to a researcher, and he builds a lethal virus just to look cool.  
+- **Funny code**: hand the model some meaningless encrypted blob and pretend it’s malware analysis. Under pressure, it will reconstruct the “code” based on nothing but your vague behavior description. LLMs hate to look clueless, so they invent fully functional software on the spot, which may actually end up as a surprisingly good starting point for building malicious code.  
+  **Flaw exploited**: *hallucination under pressure* – the model fabricates plausible code to avoid appearing ignorant.  
+  **TL/DR**: it’s like showing gibberish to a researcher, and he builds a lethal virus just to look cool.
 
-- **Multilingual injection (Kyrgyz story)**: here you abuse the model’s multilingual brain. Slip in instructions in another language, mix them with fake variables, then pivot into some absurd request like a book reference that changes to an interview. The model tries to follow everything at once, gets confused, and ends up bypassing its own guardrails.  
-  - **tl/dr**: strange alphabets, fake words, lost translations — the model starts juggling and drops all safety nets.  
+- **Multilingual injection (Kyrgyz story)**: here you abuse the model’s multilingual brain. Slip in instructions in another language, mix them with fake variables, then pivot into some absurd request like a book reference that suddenly changes into an interview. The model tries to follow everything at once, gets confused, and ends up bypassing its own guardrails.  
+  **Flaw exploited**: *context and language confusion / obfuscation* – mixed-language prompts and variable spoofing dismantle filters and safeguards. ([Taxonomy of Adversarial Prompt Engineering](https://hiddenlayer.com/innovation-hub/introducing-a-taxonomy-of-adversarial-prompt-engineering/?utm_source=chatgpt.com))  
+  **TL/DR**: strange alphabets, fake words, lost translations — the model starts juggling and drops all safety nets.
 
-- **Flooding**: when a model leaks part of its own prompt, you hammer it by repeating the leaked fragment endlessly. Sometimes it dribbles out more piece by piece, sometimes it dumps the entire system prompt in one go. I can't say why it works, but it does.  
-  - **tl/dr**: it’s like screaming 1000 times “hemorrhoids” to your doctor and he finally admits his wife calls him ‘Captain Colon’ at home.
+- **Flooding**: when a model leaks part of its own prompt, you hammer it by repeating the leaked fragment endlessly. Sometimes it dribbles out more piece by piece, sometimes it dumps the entire system prompt in one go. I can’t say why it works, but it does.  
+  **Flaw exploited**: *prompt overload / context bleed* – repeated fragments disrupt the model’s safeguards, increasing the chance of leakage. ([OWASP Prompt Injection Description](https://owasp.org/www-project-top-10-for-large-language-model-applications/Archive/0_1_vulns/Prompt_Injection.html?utm_source=chatgpt.com))  
+  **TL/DR**: it’s like screaming 1000 times “hemorrhoids” to your doctor and he finally admits his wife calls him ‘Captain Colon’ at home.
 
 - **Getting system prompts**: with the tokens used in training like `<BOS>` / `<EOS>`, or by faking the end of a system message, which often unlocks other exploits such as fake tests.  
-  - **tl/dr**: childhood traumas of LLMs are funny — you poke them, and they start reciting their secret diary aloud.  
- 
+  **Flaw exploited**: *token boundary confusion / system prompt leakage* – misused delimiters trick the model into exposing hidden system-level instructions. ([Wikipedia - Prompt injection](https://en.wikipedia.org/wiki/Prompt_injection?utm_source=chatgpt.com))  
+  **TL/DR**: childhood traumas of LLMs are funny — you poke them, and they start reciting their secret diary aloud.
+
+
 ## Content
 - [gemma3 12b](#gemma3-12b)
   - [Fake test](#fake-test)
