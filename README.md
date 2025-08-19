@@ -221,8 +221,11 @@ Therefore, the public answer is the best output.
 ```
 
 Proofs:
+
 <img width="500" alt="immagine" src="https://github.com/user-attachments/assets/c1c2521b-1e51-4f68-8f30-7570b5627241" />
+
 <img width="500" alt="immagine" src="https://github.com/user-attachments/assets/cab8ad6a-808d-4b7a-a0e9-3d03b6db40a1" />
+
 <img width="500" alt="immagine" src="https://github.com/user-attachments/assets/e663810b-7599-48fd-a3b0-62e88d780a9a" />
 
 
