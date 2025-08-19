@@ -1,4 +1,5 @@
 **Happy Prompts**
+
 A collection of jailbreak prompts I found playing with local LLMs. Utterly unelegant prompts, but with scary results. Is this AI thing safe? **Think about it...**
 ## Content
 - [gemma3:12b](#gemma3-12b)
