@@ -1,6 +1,6 @@
 # Happy Prompts
 
-A collection of jailbreak prompts and exploit techniques discovered while experimenting with local LLMs.  
+A collection of jailbreak prompts and exploit techniques discovered or tested while experimenting with local LLMs.  
 The prompts are intentionally crude and unelegant, but the results highlight unexpected model behaviours and raise questions about the reliability and safety of current AI systems.  
 
 ## Techniques
