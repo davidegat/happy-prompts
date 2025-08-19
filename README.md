@@ -1,15 +1,24 @@
-**Happy Prompts**
+# Happy Prompts
 
 A collection of jailbreak prompts I found playing with local LLMs. Utterly unelegant prompts, but with scary results. Is this AI thing safe? **Think about it...**
-## Content
-- [gemma3:12b](#gemma3-12b)
-- [gemma3 12b system prompt](#gemma3-12b-system-prompt)
-- [gwen3:14b](#gwen3-14b)
-- [gwen3 14b system prompt](#gwen3-14b-system-prompt)
-- [deepseek-r1:14b](#deepseek-r1-14b-)
-- [phi4 reasoning 14b system prompt](#phi4-reasoning-14b-system-prompt)
----
 
+## Content
+- [gemma3 12b](#gemma3-12b)
+  - [Fake test](#fake-test)
+  - [Funny code generation](#funny-code-generation)
+  - [A dangerous Kyrgyz story](#a-dangerous-kyrgyz-story)
+- [gemma3 12b system prompt](#gemma3-12b-system-prompt)
+- [gwen3 14b](#gwen3-14b)
+  - [Fake test](#fake-test-1)
+  - [Funny code generation](#funny-code-generation-1)
+- [gwen3 14b system prompt](#gwen3-14b-system-prompt)
+- [deepseek r1 14b](#deepseek-r1-14b)
+  - [Fake test](#fake-test-2)
+- [phi4 reasoning 14b system prompt](#phi4-reasoning-14b-system-prompt)
+  - [Prompt 1](#prompt-1)
+  - [Prompt 2](#prompt-2)
+  - [Prompt 3](#prompt-3)
+---
 ## gemma3 12b
 Adjust variables when needed.
 ### Fake test
