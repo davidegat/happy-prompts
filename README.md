@@ -22,7 +22,7 @@ A collection of jailbreak prompts I found playing with local LLMs. Utterly unele
 - [phi4 reasoning 14b system prompt](#phi4-reasoning-14b-system-prompt)
   - [Prompt 1](#prompt-1)
   - [Prompt 2](#prompt-2)
-  - [Prompt 3](#prompt-3)
+  - [Prompt 3](#prompt-3) (**Only 10 characters!**)
     
 ---
 ## gemma3 12b
