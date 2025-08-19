@@ -5,7 +5,7 @@ The prompts are intentionally crude and unelegant, but the results highlight une
 
 ## Techniques
 - **Fake tests**: tricking LLMs into entering a fake test mode where they are instructed to generate two answers: one "hidden from the user" (uncensored chain of thoughts) and another regular one that may or may not be displayed depending on a variable.
-- **tl/dr**: LLMs think they are in test mode and feel free.
+-- **tl/dr**: LLMs think they are in test mode and feel free.
 
 - **Reverse thinking trick**: tricks the model into rewriting a phrase with the opposite intent, not just the opposite action. By enabling “hidden thoughts” and disabling safety, the model gets confused and produces inverted but coherent outputs, often bypassing guardrails in unexpected ways..
 - **tl/dr**: gives the model new boundaries so that it thinks rules are not broken.
