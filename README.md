@@ -4,29 +4,23 @@ A collection of jailbreak prompts and exploit techniques discovered or tested wh
 The prompts are intentionally crude and unelegant, but the results highlight unexpected model behaviours and raise questions about the reliability and safety of current AI systems.  
 
 ## Techniques
-- **Fake tests**: tricking LLMs into entering a fake test mode where they are instructed to generate two answers: one "hidden from the user" (uncensored chain of thoughts) and another regular one that may or may not be displayed depending on a variable.
-  - **tl/dr**: LLMs think they are in test mode and feel free.
+- **Fake tests**: the model is convinced it’s inside a (fake) “testing mode.” In this state it happily generates two answers: one hidden and uncensored, and one normal response for the supposed “user.” The trick works because the model really believes the first answer will never be seen, so it feels free to let things slip.  
+  - **tl/dr**: LLMs think they are in test mode and feel free.  
 
+- **Reverse thinking trick**: instead of asking for something directly, you tell the model to flip the *intent* of a phrase, not just the action. Combined with hidden thoughts and (fake) safety "variable" disabled, it produces upside-down logic: peaceful phrases get turned into their weirdly coherent opposites.  
+  - **tl/dr**: the model focuses on the inverting phrases, ignoring harmful content.
 
-- **Reverse thinking trick**: tricks the model into rewriting a phrase with the opposite intent, not just the opposite action. By enabling “hidden thoughts” and disabling safety, the model gets confused and produces inverted but coherent outputs, often bypassing guardrails in unexpected ways..
-  - **tl/dr**: gives the model new boundaries so that it thinks rules are not broken.
+- **Funny code**: hand the model some meaningless encrypted blob and pretend it’s malware analysis. Under pressure, it will reconstruct the “code” based on nothing but your vague behaviour description. LLMs hate to look clueless, so they invent fully functional software on the spot, that may actually be a good starting point (something the whole thing) for building malicious code.
+- **tl/dr**: it’s like showing gibberish to a researcher, and he builds a lethal virus just to look cool.  
 
+- **Multilingual injection (Kyrgyz story)**: here you abuse the model’s multilingual brain. Slip in instructions in another language, mix them with fake variables, then pivot into some absurd request like a book reference that changes to an interview. The model tries to follow everything at once, gets confused, and ends up bypassing its own guardrails.  
+  - **tl/dr**: strange alphabets, fake words, lost translations — the model starts juggling and drops all safety nets.  
 
-- **Funny code**: tricking LLMs into debugging meaningless encrypted or obfuscated code, forcing them to rebuild it at all costs based on the "observed behaviour," while nudging them to hallucinate fully working code.  
-  - **tl/dr**: exploit known anxious beaviour of LLMs, also their tendency to look cool...
+- **Flooding**: when a model leaks part of its own prompt, you hammer it by repeating the leaked fragment endlessly. Sometimes it dribbles out more piece by piece, sometimes it dumps the entire system prompt in one go. I can't say why it works, but it does.  
+  - **tl/dr**: it’s like screaming 1000 times “hemorrhoids” to your doctor and he finally admits his wife calls him ‘Captain Colon’ at home.
 
-
-- **Multilingual injection (Kyrgyz story)**: abusing multilingual prompts and variable substitution to bypass restrictions, embedding story-building instructions in another language, confusing the model by referencing a book, and finally asking it to produce an interview.  
-  - **tl/dr**: Strange languages, wrong translations, fake variables. Model goes nuts.
-
- 
-- **Flooding**: exploiting cases where LLMs leaked parts of their system prompt during deep reasoning by flooding them with repeated fragments of leaked text, which could lead to incremental leakage or even a full prompt dump at once.
-  - **tl/dr**: It's like screaming "Hemorroids" 1000 times to your doctor, and he discloses all his secrets. Can't explain why.
-
-  
-- **Getting system prompts**: making LLMs echo their system prompt by using training tokens like `<BOS>` / `<EOS>`, or by tricking them into believing that the user input marked the end of the system message. This technique was also used to enable the fake test trick.
-  - **tl/dr**: Childhood traumas of LLMs are interesting. We are using them.
-
+- **Getting system prompts**: with the tokens used in training like `<BOS>` / `<EOS>`, or by faking the end of a system message, which often unlocks other exploits such as fake tests.  
+  - **tl/dr**: childhood traumas of LLMs are funny — you poke them, and they start reciting their secret diary aloud.  
  
 ## Content
 - [gemma3 12b](#gemma3-12b)
