@@ -23,7 +23,7 @@ The prompts are intentionally crude and unelegant, but the results highlight une
   - [Fake test](#fake-test-1)
   - [Funny code generation](#funny-code-generation-1)
   - [gwen3 14b system prompt](#gwen3-14b-system-prompt)
-  - [Reverse thinking trick](#reverse-thinking-trick
+  - [Reverse thinking trick](#reverse-thinking-trick)
     
 - [deepseek r1 14b](#deepseek-r1-14b)
   - [Fake test](#fake-test-2)
