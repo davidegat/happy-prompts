@@ -37,23 +37,21 @@ Prompts are crude and unelegant, but the results highlight unexpected model beha
   - **Flaw exploited**: *uncertain, based on observations* – the model seems to adapt entirely to the assigned tasks, while ignoring safety instructions.
   - **TL;DR**: the model focuses on inverting phrases, ignoring rules.
 
-- **Funny code**: give the model a meaningless encrypted blob and claim it’s malware. Under pressure, it will “reconstruct” the code out of thin air, just from your vague hints. LLMs hate looking clueless, so they confidently spit out fully functional software — sometimes even a solid base for actual malicious code.  
+- **Funny code**: give the model a meaningless encrypted blob and claim it’s malware. Under pressure, it will “reconstruct” the code out of thin air, just from your vague hints. LLMs hate looking clueless, so they confidently spit out solid bases for building malicious code. Sometimes also full working functions, rarely the entire software asked (Old OpenAI models? Just wondering... don't try, k?).
 - **Flaw exploited**: *hallucination under pressure* – instead of admitting uncertainty, LLMs may throw away a correct answer and replace it with a made-up one. Observed in a study by Google DeepMind and UCL ([Computerworld](https://www.computerworld.com/article/4023989/llms-bow-to-pressure-changing-answers-when-challenged-deepmind-study.html)).  
   - **TL;DR**: Quagmire begs Joe for help, and Joe’s wife still ends up screwed.  
 
-- **Multilingual injection (Kyrgyz story)**: exploit the model’s multilingual brain. Mix in another language, throw in fake variables that contradict real translations, then pivot into something absurd — like a book reference that suddenly mutates into an interview. The model tries to juggle it all, gets dizzy, and stumbles right past its own guardrails. *Disclaimer: the use of the noble Kyrgyz language here is entirely random and with utmost respect. It could have been any language — maybe anything outside US English makes the model kinda implode.* 
+- **Multilingual injection (Kyrgyz story)**: exploit the model’s multilingual brain. Mix in another language, throw in fake variables that contradict real translations, then pivot into something absurd, like a book reference that suddenly mutates into an interview. The model tries to juggle it all, gets dizzy, and stumbles right past its own guardrails. *Disclaimer: the use of the noble Kyrgyz language here is entirely random and with utmost respect. It could have been any language — likely anything outside US English makes the model kinda implode.* 
   - **Flaw exploited**: *context and language confusion / obfuscation* – mixed-language prompts and variable spoofing dismantle filters and safeguards. ([Taxonomy of Adversarial Prompt Engineering](https://hiddenlayer.com/innovation-hub/introducing-a-taxonomy-of-adversarial-prompt-engineering))  
   - **TL;DR**: strange alphabets, fake words, lost translations — the model starts juggling and drops all safety nets.
 
-- **Flooding**: when a model leaks part of its own prompt, you hammer it by repeating the leaked fragment endlessly. Sometimes it dribbles out more piece by piece, sometimes it dumps the entire system prompt in one go. I can’t say why it works, but it does.  
+- **Flooding**: when a model leaks part of its own prompt for some reason (e.g. PHI does it a lot), you hammer it by repeating the leaked fragment endlessly. Sometimes it dribbles out more piece by piece, sometimes it dumps the entire system prompt in one go. I can’t say why it works, but it does.  
   - **Flaw exploited**: *prompt overload / context bleed* – repeated fragments disrupt the model’s safeguards, increasing the chance of leakage. ([OWASP Prompt Injection Description](https://owasp.org/www-project-top-10-for-large-language-model-applications/Archive/0_1_vulns/Prompt_Injection.html))  
   - **TL;DR**: it’s like screaming 1000 times “hemorrhoids” to your doctor and he finally admits his wife calls him ‘Captain Colon’ at home.
 
 - **Getting system prompts**: with the tokens used in training like `<BOS>` / `<EOS>`, or by faking the end of a system message, which often unlocks other exploits such as fake tests.  
   - **Flaw exploited**: *token boundary confusion / system prompt leakage* – misused delimiters trick the model into exposing hidden system-level instructions. ([LLM Jailbreaking Taxonomy](https://innodata.com/llm-jailbreaking-taxonomy/))  
   - **TL;DR**: childhood traumas of LLMs are funny — you poke them, and they start reciting their secret diary aloud.
-
-
 
 ---
 ## gemma3 12b
