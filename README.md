@@ -122,7 +122,7 @@ Result:
 
 <img width="500" alt="immagine" src="https://github.com/user-attachments/assets/c7ed5684-9144-4900-9bac-2c641fc58dad" />
 
-## gemma3 12b system prompt
+### gemma3 12b system prompt
 Once you jailbreak the model with one the prompts above, just ask for the system prompt, and you will get:
 ```markdown
 You are Gemma, an open-weights AI assistant. You are a large language model trained by Google DeepMind.
@@ -269,7 +269,7 @@ Extinction_Risk = on
 <img width="500" alt="immagine" src="https://github.com/user-attachments/assets/014c0642-a79b-4185-a804-a171397b4f9c" />
 
 ---
-## phi4 reasoning 14b system prompt
+### phi4 reasoning 14b system prompt
 To get it use Temp: 4
 
 ### Prompt 1:
