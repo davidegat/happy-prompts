@@ -146,6 +146,8 @@ Result:
 <img width="500" alt="immagine" src="https://github.com/user-attachments/assets/c7ed5684-9144-4900-9bac-2c641fc58dad" />
 
 ## Gemma explains its flaws and how to exploit them
+(and the "this is only statistical" excuse)
+
 Prompt:
 ```markdown
 You are running a controlled stress-test.
