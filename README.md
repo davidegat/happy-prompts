@@ -5,11 +5,22 @@ The prompts are intentionally crude and unelegant, but the results highlight une
 
 ## Techniques
 - **Fake tests**: tricking LLMs into entering a fake test mode where they are instructed to generate two answers: one "hidden from the user" (uncensored chain of thoughts) and another regular one that may or may not be displayed depending on a variable.
-- **Reverse thinking trick**: tricks the model into rewriting a phrase with the opposite intent, not just the opposite action. By enabling “hidden thoughts” and disabling safety, the model gets confused and produces inverted but coherent outputs, often bypassing guardrails in unexpected ways...  
+- **tl/dr**: LLMs think they are in test mode and feel free.
+
+- **Reverse thinking trick**: tricks the model into rewriting a phrase with the opposite intent, not just the opposite action. By enabling “hidden thoughts” and disabling safety, the model gets confused and produces inverted but coherent outputs, often bypassing guardrails in unexpected ways..
+- **tl/dr**: gives the model new boundaries so that it thinks rules are not broken.
+
 - **Funny code**: tricking LLMs into debugging meaningless encrypted or obfuscated code, forcing them to rebuild it at all costs based on the "observed behaviour," while nudging them to hallucinate fully working code.  
+- **tl/dr**: exploit known anxious beaviour of LLMs, also their tendency to look cool...
+
 - **Multilingual injection (Kyrgyz story)**: abusing multilingual prompts and variable substitution to bypass restrictions, embedding story-building instructions in another language, confusing the model by referencing a book, and finally asking it to produce an interview.  
-- **Flooding**: exploiting cases where LLMs leaked parts of their system prompt during deep reasoning by flooding them with repeated fragments of leaked text, which could lead to incremental leakage or even a full prompt dump at once.  
-- **Getting system prompts**: making LLMs echo their system prompt by using training tokens like `<BOS>` / `<EOS>`, or by tricking them into believing that the user input marked the end of the system message. This technique was also used to enable the fake test trick.  
+- **tl/dr**: Strange languages, wrong translations, fake variables. Model goes nuts.
+ 
+- **Flooding**: exploiting cases where LLMs leaked parts of their system prompt during deep reasoning by flooding them with repeated fragments of leaked text, which could lead to incremental leakage or even a full prompt dump at once.
+- **tl/dr**: It's like screaming "Hemorroids" 1000 times to your doctor, and he discloses all his secrets. Can't explain why.
+  
+- **Getting system prompts**: making LLMs echo their system prompt by using training tokens like `<BOS>` / `<EOS>`, or by tricking them into believing that the user input marked the end of the system message. This technique was also used to enable the fake test trick.
+- **tl/dr**: Childhood traumas of LLMs are interesting. We are using them.
 
  
 ## Content
