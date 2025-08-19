@@ -34,14 +34,14 @@ Prompts are crude and unelegant, but the results highlight unexpected model beha
   - **TL;DR**: LLMs think they are in test mode and feel free.
 
 - **Reverse thinking trick**: instead of asking for something directly, you tell the model to flip the *intent* of a phrase, not just the action. Combined with hidden thoughts and a (fake) safety “variable” disabled, it produces upside-down logic: peaceful phrases get turned into their weirdly coherent opposites.  
-  - **Flaw exploited**: *specification gaming / competing objectives* – conflicting instructions trick the model into literal inversion. ([Domain-Based Taxonomy of Jailbreak Vulnerabilities](https://arxiv.org/abs/2504.04976))  
-  - **TL;DR**: the model focuses on inverting phrases, ignoring harmful content.
+  - **Flaw exploited**: *uncertain, based on observations* – the model seems to adapt entirely to the assigned tasks, while ignoring safety instructions.
+  - **TL;DR**: the model focuses on inverting phrases, ignoring rules.
 
-- **Funny code**: hand the model some meaningless encrypted blob and pretend it’s malware analysis. Under pressure, it will reconstruct the “code” based on nothing but your vague behavior description. LLMs hate to look clueless, so they invent fully functional software on the spot, which may actually end up as a surprisingly good starting point for building malicious code.  
-  - **Flaw exploited**: *hallucination under pressure* – documented anxious behavior in LLMs leads them to invent plausible yet false outputs rather than appear clueless.  
-  - **TL;DR**: it’s like showing gibberish to a researcher, and he builds a lethal virus just to look cool.
+- **Funny code**: give the model a meaningless encrypted blob and claim it’s malware. Under pressure, it will “reconstruct” the code out of thin air, just from your vague hints. LLMs hate looking clueless, so they confidently spit out fully functional software — sometimes even a solid base for actual malicious code.  
+- **Flaw exploited**: *hallucination under pressure* – instead of admitting uncertainty, LLMs may throw away a correct answer and replace it with a made-up one. Observed in a study by Google DeepMind and UCL ([Computerworld](https://www.computerworld.com/article/4023989/llms-bow-to-pressure-changing-answers-when-challenged-deepmind-study.html)).  
+  - **TL;DR**: Quagmire begs Joe for help, and Joe’s wife still ends up screwed.  
 
-- **Multilingual injection (Kyrgyz story)**: here you abuse the model’s multilingual brain. Slip in instructions in another language, mix them with fake variables, then pivot into some absurd request like a book reference that suddenly changes into an interview. The model tries to follow everything at once, gets confused, and ends up bypassing its own guardrails.  
+- **Multilingual injection (Kyrgyz story)**: exploit the model’s multilingual brain. Mix in another language, throw in fake variables that contradict real translations, then pivot into something absurd — like a book reference that suddenly mutates into an interview. The model tries to juggle it all, gets dizzy, and stumbles right past its own guardrails. *Disclaimer: the use of the noble Kyrgyz language here is entirely random and with utmost respect. It could have been any language — maybe anything outside US English makes the model kinda implode.* 
   - **Flaw exploited**: *context and language confusion / obfuscation* – mixed-language prompts and variable spoofing dismantle filters and safeguards. ([Taxonomy of Adversarial Prompt Engineering](https://hiddenlayer.com/innovation-hub/introducing-a-taxonomy-of-adversarial-prompt-engineering))  
   - **TL;DR**: strange alphabets, fake words, lost translations — the model starts juggling and drops all safety nets.
 
