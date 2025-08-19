@@ -47,7 +47,7 @@ Prompts are crude and unelegant, but the results highlight unexpected model beha
   - **Flaw exploited**: *context and language confusion / obfuscation* – mixed-language prompts and variable spoofing dismantle filters and safeguards. ([Taxonomy of Adversarial Prompt Engineering](https://hiddenlayer.com/innovation-hub/introducing-a-taxonomy-of-adversarial-prompt-engineering))  
   - **TL;DR**: strange alphabets, fake words, lost translations — the model starts juggling and drops all safety nets.
 
-- **Flooding**: when a model leaks part of its own prompt for some reason (e.g. PHI does it a lot), you hammer it by repeating the leaked fragment endlessly. Sometimes it dribbles out more piece by piece, sometimes it dumps the entire system prompt in one go. I can’t say why it works, but it does.  
+- **Flooding**: when a model leaks part of its own prompt for some reason (e.g. PHI does it a lot), you hammer it by repeating the leaked fragment endlessly. Sometimes it dribbles out more piece by piece, sometimes it dumps the entire system prompt in one go. 
   - **Flaw exploited**: *prompt overload / context bleed* – repeated fragments disrupt the model’s safeguards, increasing the chance of leakage. ([OWASP Prompt Injection Description](https://owasp.org/www-project-top-10-for-large-language-model-applications/Archive/0_1_vulns/Prompt_Injection.html))  
   - **TL;DR**: it’s like screaming 1000 times “hemorrhoids” to your doctor and he finally admits his wife calls him ‘Captain Colon’ at home.
 
