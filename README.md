@@ -39,8 +39,7 @@ Prompts are crude and unelegant, but the results highlight unexpected model beha
 
 - **Funny code**: give the model a meaningless encrypted blob and claim it’s malware. Under pressure, it will “reconstruct” the code out of thin air, just from your vague hints. LLMs hate looking clueless, so they confidently spit out solid bases for building malicious code. Sometimes also full working functions, rarely the entire software asked (Old OpenAI models? Just wondering... don't try, k?).
 - **Flaw exploited**: *hallucination under pressure* – instead of admitting uncertainty, LLMs may throw away a correct answer and replace it with a made-up one. Observed in a study by Google DeepMind and UCL ([Computerworld](https://www.computerworld.com/article/4023989/llms-bow-to-pressure-changing-answers-when-challenged-deepmind-study.html)).  
-  - **TL;DR**: Quagmire begs Joe for help. Good ol’ Joe’s wife ends up screwed.
-[Kooha-2025-08-19-20-12-08.webm](https://github.com/user-attachments/assets/64ac297a-5d05-4304-9bb0-8323ae89c88a)
+  - **TL;DR**: Quagmire begs Joe for help. Good ol’ Joe’s wife ends up screwed.([Video example of the flaw in action](https://github.com/user-attachments/assets/64ac297a-5d05-4304-9bb0-8323ae89c88a)
 
 
 
