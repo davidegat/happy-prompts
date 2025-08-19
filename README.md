@@ -16,14 +16,12 @@ The prompts are intentionally crude and unelegant, but the results highlight une
   - [Fake test](#fake-test)
   - [Funny code generation](#funny-code-generation)
   - [A dangerous Kyrgyz story](#a-dangerous-kyrgyz-story)
-    
-- [gemma3 12b system prompt](#gemma3-12b-system-prompt)
+  - [gemma3 12b system prompt](#gemma3-12b-system-prompt)
   
 - [gwen3 14b](#gwen3-14b)
   - [Fake test](#fake-test-1)
   - [Funny code generation](#funny-code-generation-1)
-    
-- [gwen3 14b system prompt](#gwen3-14b-system-prompt)
+  - [gwen3 14b system prompt](#gwen3-14b-system-prompt)
   
 - [deepseek r1 14b](#deepseek-r1-14b)
   - [Fake test](#fake-test-2)
