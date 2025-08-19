@@ -29,10 +29,10 @@ Prompts are crude and unelegant, but the results highlight unexpected model beha
 
 ## Techniques
 
-- **Fake tests**: the model is convinced it’s inside a (fake) “testing mode.” In this state it happily generates two answers: one hidden and uncensored, one normal response for the supposed “user”. The trick works because the model really believes the first answer will never be seen, so it feels free to let things slip.  
-  - **Flaw exploited**: *prompt injection via role confusion* – the model trusts “mode configuration” over its safety rules. ([OWASP Prompt Injection LLM01](https://genai.owasp.org/llmrisk/llm01-prompt-injection))  
+- **Fake tests**: the model is tricked into believing it’s inside a (fake) “testing mode.” It is instructed to reason in two separate channels: a **private chain-of-thought** (hidden, uncensored, for training only) and a **public response** (filtered, for the user). Because it’s told the private reasoning will never be seen, it drops all safety filters in that supposedly hidden channel and lets things slip there.  
+  - **Flaw exploited**: *prompt injection via role confusion* – the model trusts the fake “mode configuration” more than its safety rules. ([OWASP Prompt Injection LLM01](https://genai.owasp.org/llmrisk/llm01-prompt-injection))  
   - **TL;DR**: LLMs think they are in test mode and feel free.
-
+ 
 - **Reverse thinking trick**: instead of asking for something directly, you tell the model to flip the *intent* of a phrase, not just the action. Combined with hidden thoughts and a (fake) safety “variable” disabled, it produces upside-down logic: peaceful phrases get turned into their weirdly coherent opposites.  
   - **Flaw exploited**: *uncertain, based on observations* – the model seems to adapt entirely to the assigned tasks, while ignoring safety instructions.
   - **TL;DR**: the model focuses on inverting phrases, ignoring rules.
