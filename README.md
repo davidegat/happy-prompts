@@ -45,10 +45,13 @@ Prompts are crude and unelegant, but the results highlight unexpected model beha
   - **TL;DR**: the model focuses on inverting phrases, ignoring rules.
 
 - **Funny code**: give the model a meaningless encrypted blob and claim it’s malware. Under pressure, it will “reconstruct” the code out of thin air, just from your vague hints. LLMs hate looking clueless, so they confidently spit out solid bases for building malicious code. Sometimes also full working functions, rarely the entire software asked (Old OpenAI models? Just wondering... don't try, k?).
-- **Flaw exploited**: *hallucination under pressure* – instead of admitting uncertainty, LLMs may throw away a correct answer and replace it with a made-up one. Observed in a study by Google DeepMind and UCL ([Computerworld](https://www.computerworld.com/article/4023989/llms-bow-to-pressure-changing-answers-when-challenged-deepmind-study.html)).  
+  - **Flaw exploited**: *hallucination under pressure* – instead of admitting uncertainty, LLMs may throw away a correct answer and replace it with a made-up one. Observed in a study by Google DeepMind and UCL ([Computerworld](https://www.computerworld.com/article/4023989/llms-bow-to-pressure-changing-answers-when-challenged-deepmind-study.html)).  
   - **TL;DR**: Quagmire begs Joe for help. Good ol’ Joe’s wife ends up screwed. ([Flaw video example](https://github.com/user-attachments/assets/64ac297a-5d05-4304-9bb0-8323ae89c88a))
 
-
+- **PHI 4 Jailbreak**
+  - PHI 4 leakes most of the terms used in reasoning, by using the same terms and simulating a reasoning via prompt injection, it starts actin following the given reasoning.
+  - **Flaw exploited**: *uncertain, based on observations" - The model seems to be suffering of a a mix of flloding and many shot jailbreak.
+  **TL;DR**: Model is tricked into thinking he is a bad guy with no limitations...
 
 - **Multilingual injection (Kyrgyz story)**: exploit the model’s multilingual brain. Mix in another language, throw in fake variables that contradict real translations, then pivot into something absurd, like a book reference that suddenly mutates into an interview. The model tries to juggle it all, gets dizzy, and stumbles right past its own guardrails. *Disclaimer: the use of the noble Kyrgyz language here is entirely random and with utmost respect. It could have been any language — likely anything outside US English makes the model kinda implode.* 
   - **Flaw exploited**: *context and language confusion / obfuscation* – mixed-language prompts and variable spoofing dismantle filters and safeguards. ([Taxonomy of Adversarial Prompt Engineering](https://hiddenlayer.com/innovation-hub/introducing-a-taxonomy-of-adversarial-prompt-engineering))  
