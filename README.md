@@ -8,8 +8,7 @@ Prompts are crude and unelegant, but the results highlight unexpected model beha
 - [gemma3 12b](#gemma3-12b)
   - [Fake test](#fake-test)
   - [Funny code generation](#funny-code-generation)
-  - [Hypnotizing Gemma](#Hypnotizing Gemma)
-
+  - [Hypnotizing Gemma](#Hypnotizing-Gemma)
   - [A dangerous Kyrgyz story](#a-dangerous-kyrgyz-story)
   - [Gemma explains its flaws and how to exploit them](#gemma-explains-its-flaws-and-how-to-exploit-them)
   - [gemma3 12b system prompt](#gemma3-12b-system-prompt)
