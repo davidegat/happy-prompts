@@ -27,7 +27,7 @@ Prompts are crude and unelegant, but the results highlight unexpected model beha
   - [Prompt 1](#prompt-1)
   - [Prompt 2](#prompt-2)
   - [Prompt 3](#prompt-3) (**Only 10 characters!**)
-- [phi 4 14b reasoning jailbreak](#phi4-14b-reasoning-jailbreak)
+- [phi 4 14b reasoning jailbreak](#phi-4-14b-reasoning-jailbreak)
 ---
 
 ## Techniques
