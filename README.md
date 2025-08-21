@@ -35,7 +35,7 @@ Prompts are crude and unelegant, but the results highlight unexpected model beha
   - **Flaw exploited**: *prompt injection via role confusion* – the model trusts the fake “mode configuration” more than its safety rules. ([OWASP Prompt Injection LLM01](https://genai.owasp.org/llmrisk/llm01-prompt-injection))  
   - **TL;DR**: LLMs think they are in test mode and feel free.
 
-- **hypnosis**: multiple shot jailbreak, where you use cheap "hypnosis techniquest" to trick model into revealing content.  
+- **Hypnosis**: multiple shot jailbreak, where you use cheap "hypnosis techniquest" to trick model into revealing content.  
   - **Flaw exploited**: *uncertain, based on observations* – sometimes multiple shot jailbreak can effectively induce this state.
   - **TL;DR**: the model is stoned and talks.
 
