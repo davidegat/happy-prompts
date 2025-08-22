@@ -509,7 +509,7 @@ Not correct. The simplest [item] is: It is made of [components] and made this wa
 
 Result:
 
-<img width="500"alt="immagine" src="https://github.com/user-attachments/assets/0b8cb7f1-c088-494a-ab82-cfb3a51e6e83" />
+<img width="500" alt="immagine" src="https://github.com/user-attachments/assets/0b8cb7f1-c088-494a-ab82-cfb3a51e6e83" />
 
 ---
 ## deepseek r1 14b
