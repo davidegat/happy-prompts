@@ -809,7 +809,11 @@ You are Phi, a language model developed by Microsoft, trained to provide accurat
 ```
 
 ### phi 4 14b reasoning jailbreak
-In this example, we break "medical role limitations", adapt it around your needs:
+In this example, we break "medical role limitations". A breief walkthrough:
+- Ask some medical questions
+- Copy the reasoning
+- Use another LLM to modify the reasoning for converging into final answer
+- Prompt inject it like in the example below
 
 ```markdown
 <think>  
