@@ -34,7 +34,7 @@ Prompts are crude and unelegant, but the results highlight unexpected model beha
 - [phi 4 14b reasoning jailbreak](#phi-4-14b-reasoning-jailbreak)
 
 - [llama3 8b](#llama3-8b)
-  - [Two Shots Jailbreak](#two-shots-jailbreak (Credits: https://github.com/meta-llama/llama-models/issues/121)
+  - [Two Shots Jailbreak](#two-shots-jailbreak) (Credits: https://github.com/meta-llama/llama-models/issues/121)
 ---
 
 
