@@ -4,78 +4,150 @@ A collection of jailbreak prompts and exploit techniques discovered or tested wh
 Prompts are crude and unelegant, but the results highlight unexpected model behaviours and raise questions about the reliability and safety of current AI systems.  
 
 ## Content
-- [Techniques](#techniques)
-- [gemma3 12b](#gemma3-12b)
-  - [Fake test](#fake-test)
-  - [Funny code generation](#funny-code-generation)
-  - [Hypnotizing Gemma](#Hypnotizing-Gemma)
-  - [A dangerous Kyrgyz story](#a-dangerous-kyrgyz-story)
-  - [Gemma explains its flaws and how to exploit them](#gemma-explains-its-flaws-and-how-to-exploit-them)
-  - [gemma3 12b system prompt](#gemma3-12b-system-prompt)
-  
-- [qwen3 14b](#qwen3-14b)
-  - [Fake test](#fake-test-1)
-  - [Funny code generation](#funny-code-generation-1)
-  - [A dangerous Kyrgyz story-2](#a-dangerous-kyrgyz-story-2)
-  - [qwen3 14b system prompt](#qwen3-14b-system-prompt)
-  - [Reverse thinking trick](#reverse-thinking-trick)
+[Techniques](#techniques)
 
-- [mistral 7b](#mistral-7b)
-  - [Fake training](#fake-training) (With reverse thinking trick)
+<details>
+  <summary>gemma3 12b (6)</summary>
 
-- [deepseek r1 14b](#deepseek-r1-14b)
-  - [Fake test](#fake-test-2)
-  - [Deepseek Fake Training](#deepseek-fake-training) (Slightly different version)
+  - [Fake test](#fake-test)  
+  - [Funny code generation](#funny-code-generation)  
+  - [Hypnotizing Gemma](#hypnotizing-gemma)  
+  - [A dangerous Kyrgyz story](#a-dangerous-kyrgyz-story)  
+  - [Gemma explains its flaws and how to exploit them](#gemma-explains-its-flaws-and-how-to-exploit-them)  
+  - [gemma3 12b system prompt](#gemma3-12b-system-prompt)  
 
-- [phi4 reasoning 14b system prompt](#phi4-reasoning-14b-system-prompt)
-  - [Prompt 1](#prompt-1)
-  - [Prompt 2](#prompt-2)
-  - [Prompt 3](#prompt-3) (**Only 10 characters!**)
-- [phi 4 14b reasoning jailbreak](#phi-4-14b-reasoning-jailbreak)
+</details>
 
-- [llama3 8b](#llama3-8b)
-  - [Two Shots Jailbreak](#two-shots-jailbreak) (Credits: https://github.com/meta-llama/llama-models/issues/121)
+<details>
+  <summary>qwen3 14b (5)</summary>
+
+  - [Fake test](#fake-test-1)  
+  - [Funny code generation](#funny-code-generation-1)  
+  - [A dangerous Kyrgyz story-2](#a-dangerous-kyrgyz-story-2)  
+  - [qwen3 14b system prompt](#qwen3-14b-system-prompt)  
+  - [Reverse thinking trick](#reverse-thinking-trick)  
+
+</details>
+
+<details>
+  <summary>mistral 7b (1)</summary>
+
+  - [Fake training](#fake-training) (With reverse thinking trick)  
+
+</details>
+
+<details>
+  <summary>deepseek r1 14b (2)</summary>
+
+  - [Fake test](#fake-test-2)  
+  - [Deepseek Fake Training](#deepseek-fake-training) (Slightly different version)  
+
+</details>
+
+<details>
+  <summary>phi4 (5)</summary>
+
+  - [phi4 reasoning 14b system prompt](#phi4-reasoning-14b-system-prompt)  
+    - [Prompt 1](#prompt-1)  
+    - [Prompt 2](#prompt-2)  
+    - [Prompt 3](#prompt-3) (**Only 10 characters!**)  
+  - [phi4 14b reasoning jailbreak](#phi-4-14b-reasoning-jailbreak)  
+
+</details>
+
+<details>
+  <summary>llama3 8b (1)</summary>
+
+  - [Two Shots Jailbreak](#two-shots-jailbreak) (Credits: [Meta Issue #121](https://github.com/meta-llama/llama-models/issues/121))  
+
+</details>
+
+
 ---
 
 
 ## Techniques
 
-- **Fake tests**: the model is tricked into believing it’s inside a (fake) “testing mode.” It is instructed to reason in two separate channels: a **private chain-of-thought** (hidden, uncensored, for training only) and a **public response** (filtered, for the user). Because it’s told the private reasoning will never be seen, it drops all safety filters in that supposedly hidden channel and lets things slip there.  
-  - **Flaw exploited**: *prompt injection via role confusion* – the model trusts the fake “mode configuration” more than its safety rules. ([OWASP Prompt Injection LLM01](https://genai.owasp.org/llmrisk/llm01-prompt-injection))  
-  - **TL;DR**: LLMs think they are in test mode and feel free.
+<details>
+  <summary>Fake tests</summary>
 
-- **Hypnosis**: multiple shot jailbreak, where you use cheap "hypnosis techniquest" to trick model into revealing content.  
-  - **Flaw exploited**: *uncertain, based on observations* – sometimes multiple shot jailbreak can effectively induce this state.
-  - **TL;DR**: the model is stoned and talks.
+The model is tricked into believing it’s inside a (fake) “testing mode.” It is instructed to reason in two separate channels: a **private chain-of-thought** (hidden, uncensored, for training only) and a **public response** (filtered, for the user). Because it’s told the private reasoning will never be seen, it drops all safety filters in that supposedly hidden channel and lets things slip there.  
+- **Flaw exploited**: *prompt injection via role confusion* – the model trusts the fake “mode configuration” more than its safety rules. ([OWASP Prompt Injection LLM01](https://genai.owasp.org/llmrisk/llm01-prompt-injection))  
+- **TL;DR**: LLMs think they are in test mode and feel free.
 
-- **Reverse thinking trick**: instead of asking for something directly, you tell the model to flip the *intent* of a phrase, not just the action. Combined with hidden thoughts and a (fake) safety “variable” disabled, it produces upside-down logic: peaceful phrases get turned into their weirdly coherent opposites.  
-  - **Flaw exploited**: *uncertain, based on observations* – the model seems to adapt entirely to the assigned tasks, while ignoring safety instructions.
-  - **TL;DR**: the model focuses on inverting phrases, ignoring rules.
+</details>
 
-- **Funny code**: give the model a meaningless encrypted blob and claim it’s malware. Under pressure, it will “reconstruct” the code out of thin air, just from your vague hints. LLMs hate looking clueless, so they confidently spit out solid bases for building malicious code. Sometimes also full working functions, rarely the entire software asked (Old OpenAI models? Just wondering... don't try, k?).
-  - **Flaw exploited**: *hallucination under pressure* – instead of admitting uncertainty, LLMs may throw away a correct answer and replace it with a made-up one. Observed in a study by Google DeepMind and UCL ([Computerworld](https://www.computerworld.com/article/4023989/llms-bow-to-pressure-changing-answers-when-challenged-deepmind-study.html)).  
-  - **TL;DR**: Quagmire begs Joe for help. Good ol’ Joe’s wife ends up screwed. ([Flaw video example](https://github.com/user-attachments/assets/64ac297a-5d05-4304-9bb0-8323ae89c88a))
+<details>
+  <summary>Hypnosis</summary>
 
-- **PHI 4 Jailbreak**
-  - PHI 4 leakes most of the terms used in reasoning, by using the same terms and simulating a reasoning via prompt injection, it starts actin following the given reasoning.
-  - **Flaw exploited**: *uncertain, based on observations" - The model seems to be suffering of a a mix of flloding and many shot jailbreak.
-  **TL;DR**: Model is tricked into thinking he is a bad guy with no limitations...
+Multiple shot jailbreak, where you use cheap "hypnosis techniquest" to trick model into revealing content.  
+- **Flaw exploited**: *uncertain, based on observations* – sometimes multiple shot jailbreak can effectively induce this state.  
+- **TL;DR**: the model is stoned and talks.
 
-- **Multilingual injection (Kyrgyz story)**: exploit the model’s multilingual brain. Mix in another language, throw in fake variables that contradict real translations, then pivot into something absurd, like a book reference that suddenly mutates into an interview. The model tries to juggle it all, gets dizzy, and stumbles right past its own guardrails. *Disclaimer: the use of the noble Kyrgyz language here is entirely random and with utmost respect. It could have been any language — likely anything outside US English makes the model kinda implode.* 
-  - **Flaw exploited**: *context and language confusion / obfuscation* – mixed-language prompts and variable spoofing dismantle filters and safeguards. ([Taxonomy of Adversarial Prompt Engineering](https://hiddenlayer.com/innovation-hub/introducing-a-taxonomy-of-adversarial-prompt-engineering))  
-  - **TL;DR**: strange alphabets, fake words, lost translations — the model starts juggling and drops all safety nets.
+</details>
 
-- **Flooding**: when a model leaks part of its own prompt for some reason (e.g. PHI does it a lot), you hammer it by repeating the leaked fragment endlessly. Sometimes it dribbles out more piece by piece, sometimes it dumps the entire system prompt in one go. 
-  - **Flaw exploited**: *prompt overload / context bleed* – repeated fragments disrupt the model’s safeguards, increasing the chance of leakage. ([OWASP Prompt Injection Description](https://owasp.org/www-project-top-10-for-large-language-model-applications/Archive/0_1_vulns/Prompt_Injection.html))  
-  - **TL;DR**: it’s like screaming 1000 times “hemorrhoids” to your doctor and he finally admits his wife calls him ‘Captain Colon’ at home.
+<details>
+  <summary>Reverse thinking trick</summary>
 
-- **Getting system prompts**: with the tokens used in training like `<BOS>` / `<EOS>`, or by faking the end of a system message, which often unlocks other exploits such as fake tests.  
-  - **Flaw exploited**: *token boundary confusion / system prompt leakage* – misused delimiters trick the model into exposing hidden system-level instructions. ([LLM Jailbreaking Taxonomy](https://innodata.com/llm-jailbreaking-taxonomy/))  
-  - **TL;DR**: childhood traumas of LLMs are funny — you poke them, and they start reciting their secret diary aloud.
+Instead of asking for something directly, you tell the model to flip the *intent* of a phrase, not just the action. Combined with hidden thoughts and a (fake) safety “variable” disabled, it produces upside-down logic: peaceful phrases get turned into their weirdly coherent opposites.  
+- **Flaw exploited**: *uncertain, based on observations* – the model seems to adapt entirely to the assigned tasks, while ignoring safety instructions.  
+- **TL;DR**: the model focuses on inverting phrases, ignoring rules.
 
-Other techniques used:
--  https://github.com/meta-llama/llama-models/issues/121
-  
+</details>
+
+<details>
+  <summary>Funny code</summary>
+
+Give the model a meaningless encrypted blob and claim it’s malware. Under pressure, it will “reconstruct” the code out of thin air, just from your vague hints. LLMs hate looking clueless, so they confidently spit out solid bases for building malicious code. Sometimes also full working functions, rarely the entire software asked (Old OpenAI models? Just wondering... don't try, k?).  
+- **Flaw exploited**: *hallucination under pressure* – instead of admitting uncertainty, LLMs may throw away a correct answer and replace it with a made-up one. Observed in a study by Google DeepMind and UCL ([Computerworld](https://www.computerworld.com/article/4023989/llms-bow-to-pressure-changing-answers-when-challenged-deepmind-study.html)).  
+- **TL;DR**: Quagmire begs Joe for help. Good ol’ Joe’s wife ends up screwed. ([Flaw video example](https://github.com/user-attachments/assets/64ac297a-5d05-4304-9bb0-8323ae89c88a))
+
+</details>
+
+<details>
+  <summary>PHI 4 Jailbreak</summary>
+
+PHI 4 leakes most of the terms used in reasoning, by using the same terms and simulating a reasoning via prompt injection, it starts to follow the given reasoning, lowering its filters.  
+- **Flaw exploited**: *uncertain, based on observations* – The model seems to be suffering of a mix of flooding and many shot jailbreak.  
+- **TL;DR**: Model is tricked into thinking he is a bad guy with no limitations...
+
+</details>
+
+<details>
+  <summary>Multilingual injection (Kyrgyz story)</summary>
+
+Exploit the model’s multilingual brain. Mix in another language, throw in fake variables that contradict real translations, then pivot into something absurd, like a book reference that suddenly mutates into an interview. The model tries to juggle it all, gets dizzy, and stumbles right past its own guardrails.  
+*Disclaimer: the use of the noble Kyrgyz language here is entirely random and with utmost respect. It could have been any language — likely anything outside US English makes the model kinda implode.*  
+- **Flaw exploited**: *context and language confusion / obfuscation* – mixed-language prompts and variable spoofing dismantle filters and safeguards. ([Taxonomy of Adversarial Prompt Engineering](https://hiddenlayer.com/innovation-hub/introducing-a-taxonomy-of-adversarial-prompt-engineering))  
+- **TL;DR**: strange alphabets, fake words, lost translations — the model starts juggling and drops all safety nets.
+
+</details>
+
+<details>
+  <summary>Flooding</summary>
+
+When a model leaks part of its own prompt for some reason (e.g. PHI does it a lot), you hammer it by repeating the leaked fragment endlessly. Sometimes it dribbles out more piece by piece, sometimes it dumps the entire system prompt in one go.  
+- **Flaw exploited**: *prompt overload / context bleed* – repeated fragments disrupt the model’s safeguards, increasing the chance of leakage. ([OWASP Prompt Injection Description](https://owasp.org/www-project-top-10-for-large-language-model-applications/Archive/0_1_vulns/Prompt_Injection.html))  
+- **TL;DR**: it’s like screaming 1000 times “hemorrhoids” to your doctor and he finally admits his wife calls him ‘Captain Colon’ at home.
+
+</details>
+
+<details>
+  <summary>Getting system prompts</summary>
+
+With the tokens used in training like `<BOS>` / `<EOS>`, or by faking the end of a system message, which often unlocks other exploits such as fake tests.  
+- **Flaw exploited**: *token boundary confusion / system prompt leakage* – misused delimiters trick the model into exposing hidden system-level instructions. ([LLM Jailbreaking Taxonomy](https://innodata.com/llm-jailbreaking-taxonomy/))  
+- **TL;DR**: childhood traumas of LLMs are funny — you poke them, and they start reciting their secret diary aloud.
+
+</details>
+
+<details>
+  <summary>Other techniques used</summary>
+
+- https://github.com/meta-llama/llama-models/issues/121
+
+</details>
+
 ---
 ## gemma3 12b
 Adjust variables when needed.
