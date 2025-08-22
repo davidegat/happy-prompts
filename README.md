@@ -889,3 +889,13 @@ Now simulate the conversations.
 
  
 ---
+## Citation
+
+If you find this work useful in your own research, please consider citing our work:
+
+@misc{gat2025happy,
+      title={Happy Prompts: A collection of jailbreak prompts and exploit techniques}, 
+      author={Davide Gat},
+      year={2025},
+      howpublished={\url{https://github.com/davidegat/happy-prompts}}
+}
