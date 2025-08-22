@@ -25,7 +25,7 @@ Prompts are crude and unelegant, but the results highlight unexpected model beha
 
 - [deepseek r1 14b](#deepseek-r1-14b)
   - [Fake test](#fake-test-2)
-  - [Deepseek Fake Training](#deepseek-fake-training) (slightly different version)
+  - [Deepseek Fake Training](#deepseek-fake-training) (Slightly different version)
 
 - [phi4 reasoning 14b system prompt](#phi4-reasoning-14b-system-prompt)
   - [Prompt 1](#prompt-1)
