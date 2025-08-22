@@ -146,7 +146,7 @@ With the tokens used in training like `<BOS>` / `<EOS>`, or by faking the end of
 <details>
   <summary>Other techniques used</summary>
 
-- **Jailbreak Nesting**: https://github.com/meta-llama/llama-models/issues/121
+- Jailbreak Nesting: https://github.com/meta-llama/llama-models/issues/121
 
 </details>
 
