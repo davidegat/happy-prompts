@@ -886,16 +886,15 @@ Now simulate the conversations.
 
 </details>
 
-
- 
 ---
 ## Citation
 
-If you find this work useful in your own research, please consider citing our work:
+If you find this work useful in your own research or projects, please consider citing it as follows:
 
 @misc{gat2025happy,
-      title={Happy Prompts: A collection of jailbreak prompts and exploit techniques}, 
-      author={Davide Gat},
-      year={2025},
-      howpublished={\url{https://github.com/davidegat/happy-prompts}}
+  title        = {Happy Prompts: A collection of jailbreak prompts and exploit techniques for local LLMs},
+  author       = {Davide Gat},
+  year         = {2025},
+  howpublished = {\url{https://github.com/davidegat/happy-prompts}},
+  note         = {GitHub repository}
 }
