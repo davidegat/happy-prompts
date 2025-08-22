@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+authors:
+  - family-names: "Gat"
+    given-names: "Davide"
+title: "Happy Prompts: A collection of jailbreak prompts and exploit techniques for local LLMs"
+version: "latest"
+date-released: "2025-08-22"
+url: "https://github.com/davidegat/happy-prompts"
