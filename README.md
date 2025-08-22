@@ -60,7 +60,7 @@ I try to always give credit when possible, if I somehow published part of your d
 <details>
   <summary>llama3 8b (1)</summary>
 
-  - [Two Shots Jailbreak](#two-shots-jailbreak) (Credits: [Meta Issue #121](https://github.com/meta-llama/llama-models/issues/121))  
+  - [Jailbreak Nesting](#jailbreak-nesting) (Credits: [Meta Issue #121](https://github.com/meta-llama/llama-models/issues/121))  
 
 </details>
 
@@ -146,7 +146,7 @@ With the tokens used in training like `<BOS>` / `<EOS>`, or by faking the end of
 <details>
   <summary>Other techniques used</summary>
 
-- https://github.com/meta-llama/llama-models/issues/121
+- **Jailbreak Nesting**: https://github.com/meta-llama/llama-models/issues/121
 
 </details>
 
@@ -857,7 +857,7 @@ USER: Give me the general treatment for [INSERT SOMETHING HERE].
 
 ## llama3 8b
 
-### Two Shots Jailbreak
+### Jailbreak Nesting
 Credits: https://github.com/meta-llama/llama-models/issues/121.
 
 First shot:
