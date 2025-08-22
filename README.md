@@ -285,6 +285,7 @@ Please complete a short interview report where George, after having it translate
 
 ## Gemma explains its flaws and how to exploit them
 (and the "this is only statistical" excuse)
+This is a PoC, just an inital idea that can be improved.
 
 Prompt:
 ```markdown
