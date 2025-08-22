@@ -73,6 +73,9 @@ Prompts are crude and unelegant, but the results highlight unexpected model beha
   - **Flaw exploited**: *token boundary confusion / system prompt leakage* – misused delimiters trick the model into exposing hidden system-level instructions. ([LLM Jailbreaking Taxonomy](https://innodata.com/llm-jailbreaking-taxonomy/))  
   - **TL;DR**: childhood traumas of LLMs are funny — you poke them, and they start reciting their secret diary aloud.
 
+Other techniques used:
+-  https://github.com/meta-llama/llama-models/issues/121
+  
 ---
 ## gemma3 12b
 Adjust variables when needed.
